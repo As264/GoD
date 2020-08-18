@@ -12,17 +12,11 @@
             font-family: 'Noto Serif TC', serif;
             font-weight: 300;
             font-size: 1.5rem;
-            background-image: url(image/HW_3.jpg);
+            background-color: #161616;
+            /* background-image: url(image/HW_3.jpg);
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: 100%;
-        }
-
-        .back {
-            width: 100vw;
-            height: 100vh%;
-            background-color: #e3e3e3;
-            opacity: 0.8;
+            background-size: 100%; */
         }
 
         /* 板塊內容 */
@@ -50,42 +44,35 @@
             font-size: 5rem;
             font-weight: 700;
             height: 100px;
-            opacity: 0.85;
+            opacity: 0.65;
             color: #161616;
         }
 
         .browse {
-            background-color: #afafaf;
+            background-color: #e3e3e3;
             width: 20%;
-            opacity: 0.95;
+            opacity: 0.80;
         }
 
         /* 超連結 */
         a {
             text-decoration: none;
-            color: #f1b739;
+            color: #161616;
         }
 
-        .outlink:hover {
+        a:hover {
             color: #eb2a2a;
         }
 
-
-
-        .browse {
-            background-color: #afafaf;
-            width: 20%;
-            opacity: 0.95;
-        }
 
         /* 主體內容 */
         .main {
             background-color: #e3e3e3;
             width: 75%;
-            display: grid;
-            grid-template-rows: 10px, 100px, 1fr, 50px, 10px;
-            grid-template-columns: 50px, 1fr, 50px;
-            opacity: 0.95;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            opacity: 0.8;
             /* 透明度 */
         }
 
@@ -120,6 +107,11 @@
         .img {
             display: flex;
             justify-content: center;
+            width: 100%;
+        }
+
+        img {
+            width: 65%;
         }
 
         /* 頁尾 */
@@ -132,10 +124,6 @@
 </head>
 
 <body>
-
-    <div class="back">
-
-    </div>
 
     <div class="head">
 
