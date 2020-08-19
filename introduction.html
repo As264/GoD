@@ -5,66 +5,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>人物介紹</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* 整頁內容 */
+        body {
+            font-family: 'Noto Serif TC', serif;
+            font-weight: 300;
+            font-size: 1.5rem;
+            background-image: url(image/HW_3.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+            color: #161616;
+        }
+
+        /* 板塊內容 */
+        .head {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+
+        .all {
+            display: flex;
+            justify-content: space-around;
+            padding: 4%;
+        }
+
+        .title {
+            background-color: #e3e3e3;
+            height: 325px;
+            opacity: 0.85;
+            width: 90%;
+            display: grid;
+            grid-template-rows: 3fr, 1fr;
+        }
+
+        .imgtitle {
+            grid-row: 1 2;
+            width: 40%;
+        }
+
+        .title div:first-of-type {
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        .browse {
+            grid-row: 2 3;
+            background-color: #e3e3e3;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .browse p {
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        .browse p:nth-of-type(1) {
+            grid-column: 1 2;
+        }
+
+        .browse p:nth-of-type(2) {
+            grid-column: 2 3;
+        }
+
+        .browse p:nth-of-type(3) {
+            grid-column: 3 4;
+        }
+
+        .browse p:nth-of-type(4) {
+            grid-column: 4 5;
+        }
+
+        /* 頁尾 */
+        .footer {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eb2a2a;
+            height: 50px;
+            opacity: 0.85;
+        }
+
+        /* 主體內容 */
+        .main {
+            background-color: #e3e3e3;
+            width: 97%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            opacity: 0.95;
+            /* 透明度 */
+        }
+
+        .article_t {
+            padding: 10px;
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: #f1b739;
+            background-color: #494949;
+        }
+
+
+
+        img {
+            width: 65%;
+        }
+    </style>
 </head>
 
 <body>
-    <h text-align: center>人物介紹</h><br>
-    <table border=1>
+    <div class="head">
 
-        <tr>
-            <th><img src="image2/竈門炭治郎.jpg" width="400" "alt=" 炭治郎"></th>
-            <th><img src="image2/竈門禰豆子.jpg" width="400" alt="彌豆子"><br></th>
-        </tr>
-        <tr>
-            <th>本作漫畫中的主人公，因為家中某日突然遭鬼襲擊，妹妹因此變為鬼，為了尋找回復成人類的治療方法，成為鬼殺隊的一員並且踏上冒險之途。儘管如此，卻有著一顆溫柔善良的心，認為鬼也有善惡之分，常常對自己刀下所斬殺的鬼產生同情，可說是相當典型的主角人設，此外身上也藏著打敗最終魔王的秘密。
-            </th>
-            <th>網路人氣最高的主角的妹妹竈門禰豆子！在鬼的襲擊下雖然倖存下來，但也因此變為鬼，卻能壓抑自己對人血的渴望，一路隨著哥哥旅行冒險，並在關鍵時刻用鬼的力量保護人類。可愛的外表讓禰豆子在日本的第一回人氣投票結果中，拿下3319票獲得第3名；不過在台灣人氣更甚，超高的網路人氣讓她榮登冠軍寶座！
-            </th>
+        <div class="title">
+            <div>
+                <img class="imgtitle"
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Kimetsu_no_Yaiba_logo.svg">
+            </div>
+            <div class="browse">
 
-        </tr>
-        <tr>
-            <th><img src="image2/我妻善逸.jpg" width="400" alt="我妻善逸"></th>
-            <th> <img src="image2/伊之助.jpg" width="400" alt="伊之助"><br></th>
-        </tr>
-        <tr>
-            <th>同樣有著相當多戲份，主角三人組之一的我妻善逸，性格卻也最膽小的一位，動不動就嚷嚷著自己要死了，但危急之際，卻又總是能以睡姿揮出精湛的劍術。雖然身為雷之呼吸使用者，卻只習得壹之型的霹靂一閃，但也將其練到爐火純青，威力非同小可。
-            </th>
-            <th>漫畫中半途殺出的神祕劍士，使用自創的獸之呼吸。雖然有著粗魯殘暴的性格，並喜歡光著上半身、戴著山豬面具行徑如同野蠻人一般，面具底下卻長著一張婉如美少女的臉孔，加上反差萌的個性，有趣的設定反倒替他圈到無數的粉絲。
-            </th>
+                <p>作品簡介</p>
+                <p>角色介紹</p>
+                <p>角色專欄</p>
+                <p class="outlink"><a href="https://reurl.cc/Z7OX7p" target="block">資料來源</a></p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="all">
+        <div class="main">
+            <section class="article_t">人物介紹</section>
+            <section class="table">
+            <table>
+                <tr>
+                    <th>炭治郎</th>
+                    <th>彌豆子</th>
+                </tr>
+                <tr>
+                    <td class="img"><img src="image2/竈門炭治郎.jpg" alt="炭治郎"></td>
+                    <td class="img"><img src="image2/竈門禰豆子.jpg" alt="彌豆子"><br></td>
+                </tr>
+                <tr>
+                    <td>本作漫畫中的主人公，因為家中某日突然遭鬼襲擊，妹妹因此變為鬼，為了尋找回復成人類的治療方法，成為鬼殺隊的一員並且踏上冒險之途。儘管如此，卻有著一顆溫柔善良的心，認為鬼也有善惡之分，常常對自己刀下所斬殺的鬼產生同情，可說是相當典型的主角人設，此外身上也藏著打敗最終魔王的秘密。
+                    </td>
+                    <td>網路人氣最高的主角的妹妹竈門禰豆子！在鬼的襲擊下雖然倖存下來，但也因此變為鬼，卻能壓抑自己對人血的渴望，一路隨著哥哥旅行冒險，並在關鍵時刻用鬼的力量保護人類。可愛的外表讓禰豆子在日本的第一回人氣投票結果中，拿下3319票獲得第3名；不過在台灣人氣更甚，超高的網路人氣讓她榮登冠軍寶座！
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="img"><img src="image2/我妻善逸.jpg" alt="我妻善逸"></td>
+                    <td class="img"> <img src="image2/伊之助.jpg" alt="伊之助"><br></td>
+                </tr>
+                <tr>
+                    <td>同樣有著相當多戲份，主角三人組之一的我妻善逸，性格卻也最膽小的一位，動不動就嚷嚷著自己要死了，但危急之際，卻又總是能以睡姿揮出精湛的劍術。雖然身為雷之呼吸使用者，卻只習得壹之型的霹靂一閃，但也將其練到爐火純青，威力非同小可。
+                    </td>
+                    <td>漫畫中半途殺出的神祕劍士，使用自創的獸之呼吸。雖然有著粗魯殘暴的性格，並喜歡光著上半身、戴著山豬面具行徑如同野蠻人一般，面具底下卻長著一張婉如美少女的臉孔，加上反差萌的個性，有趣的設定反倒替他圈到無數的粉絲。
+                    </td>
 
 
-        </tr>
-        <tr>
-            <th><img src="image2/栗花落香奈乎.jpg" width="400" alt="香奈呼"></th>
-            <th><img src="image2/甘露寺蜜璃.jpg" width="400" alt="蜜璃"><br></th>
-        </tr>
-        <tr>
-            <th>漫畫中與炭治郎同期通過最終選拔的隊士，總是笑容滿面，但始終不發一語的沉默少女。隨著劇情推移才揭曉，因為悲慘的過去，導致她在溝通方面有困擾，思考上一板一眼常常不知該如何決定。同時也是網路上呼聲最高，希望與炭治郎成為一對的角色！
-            </th>
-            <th>戀之呼吸的使用者，有著一頭粉紅色的頭髮，加上穿著暴露隊服的造型，初登場就令人印象深刻。因為天生體質特殊的關係，讓她一出生就有著過人的力氣，但也因此當上鬼殺隊的柱，並且曾經透露，為了要找到一個實力強大，可以保護她的好老公，才會拼命成為柱。
-            </th>
+                </tr>
+                <tr>
+                    <td class="img"><img src="image2/栗花落香奈乎.jpg" alt="香奈呼"></td>
+                    <td class="img"><img src="image2/甘露寺蜜璃.jpg" alt="蜜璃"><br></td>
+                </tr>
+                <tr>
+                    <td>漫畫中與炭治郎同期通過最終選拔的隊士，總是笑容滿面，但始終不發一語的沉默少女。隨著劇情推移才揭曉，因為悲慘的過去，導致她在溝通方面有困擾，思考上一板一眼常常不知該如何決定。同時也是網路上呼聲最高，希望與炭治郎成為一對的角色！
+                    </td>
+                    <td>戀之呼吸的使用者，有著一頭粉紅色的頭髮，加上穿著暴露隊服的造型，初登場就令人印象深刻。因為天生體質特殊的關係，讓她一出生就有著過人的力氣，但也因此當上鬼殺隊的柱，並且曾經透露，為了要找到一個實力強大，可以保護她的好老公，才會拼命成為柱。
+                    </td>
 
 
-        </tr>
-        <tr>
-            <th><img src="image2/胡蝶忍.jpg" width="400" alt="蝴蝶忍"></th>
-            <th><img src="image2/時透無一郎.jpg" width="400" alt="無一郎"><br></th>
-        </tr>
-        <tr>
-            <th>漫畫中唯一沒辦法將鬼腦袋斬下的柱，但卻是相對厲害的製毒師，使用蟲之呼吸以毒殺的方式擊敗各種鬼。平常總是笑臉迎人，卻被主角炭治郎發現背後藏著「生氣的味道」，追問之下得知因為親姐姐被鬼殺害，內心深處一直都憎恨著鬼。日本舉辦的第一回人氣投票結果中，也以1813高票獲得第6名。
-            </th>
-            <th>鬼殺隊中年紀最小的柱，也是霞之呼吸的使用者，僅僅花兩個月就從隊士當上柱的天才。擁有強大的實力，卻因為喪失記憶的關係，平常總是望著天空發呆，呆萌的屬性反而意外受到不少粉絲喜愛。</th>
-        </tr>
-        <tr>
-            <th><img src="image2/富岡義勇.jpg" width="400" alt="義勇"></th>
-            <th><img src="image2/珠世.jpg" width="400" alt="珠世"><br></th>
-        </tr>
-        <tr>
-            <th>身為鬼殺隊水柱，使用與炭治郎一樣的水之呼吸，不只在相當早的時期就登場，也數度在千鈞一髮之際救下主角，冷酷的外表下卻相當講究義氣，甚至為了讓禰豆子活下來，不惜以自己的生命作為擔保。</th>
-            <th>總是以一襲美麗和服現身，實際年齡已經超過五百歲的珠世，雖然身為鬼卻處處幫助炭治郎，並且用高明的醫術研究發生在禰豆子身上的變化。另外更扮演著打敗最終魔王的關鍵角色，強悍與美麗的結合備受網友喜愛。</th>
+                </tr>
+                <tr>
+                    <td class="img"><img src="image2/胡蝶忍.jpg" alt="蝴蝶忍"></td>
+                    <td class="img"><img src="image2/時透無一郎.jpg" alt="無一郎"><br></td>
+                </tr>
+                <tr>
+                    <td>漫畫中唯一沒辦法將鬼腦袋斬下的柱，但卻是相對厲害的製毒師，使用蟲之呼吸以毒殺的方式擊敗各種鬼。平常總是笑臉迎人，卻被主角炭治郎發現背後藏著「生氣的味道」，追問之下得知因為親姐姐被鬼殺害，內心深處一直都憎恨著鬼。日本舉辦的第一回人氣投票結果中，也以1813高票獲得第6名。
+                    </td>
+                    <td>鬼殺隊中年紀最小的柱，也是霞之呼吸的使用者，僅僅花兩個月就從隊士當上柱的天才。擁有強大的實力，卻因為喪失記憶的關係，平常總是望著天空發呆，呆萌的屬性反而意外受到不少粉絲喜愛。</td>
+                </tr>
+                <tr>
+                    <td class="img"><img src="image2/富岡義勇.jpg" alt="義勇"></td>
+                    <td class="img"><img src="image2/珠世.jpg" alt="珠世"><br></td>
+                </tr>
+                <tr>
+                    <td>身為鬼殺隊水柱，使用與炭治郎一樣的水之呼吸，不只在相當早的時期就登場，也數度在千鈞一髮之際救下主角，冷酷的外表下卻相當講究義氣，甚至為了讓禰豆子活下來，不惜以自己的生命作為擔保。</td>
+                    <td>總是以一襲美麗和服現身，實際年齡已經超過五百歲的珠世，雖然身為鬼卻處處幫助炭治郎，並且用高明的醫術研究發生在禰豆子身上的變化。另外更扮演著打敗最終魔王的關鍵角色，強悍與美麗的結合備受網友喜愛。
+                    </td>
 
-        </tr>
-    </table>
+                </tr>
+            </table>
+        </section>
+        </div>
+    </div>
+    <div class="head">
+
+        <div class="footer">
+            產業新尖兵課程專題</br>
+        </div>
+
+    </div>
 </body>
 
 </html>
