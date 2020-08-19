@@ -12,11 +12,11 @@
             font-family: 'Noto Serif TC', serif;
             font-weight: 300;
             font-size: 1.5rem;
-            background-color: #161616;
-            /* background-image: url(image/HW_3.jpg);
+            background-image: url(image/HW_3.jpg);
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: 100%; */
+            background-size: 100%;
+            color: #161616;
         }
 
         /* 板塊內容 */
@@ -28,7 +28,8 @@
 
         .head {
             display: flex;
-            justify-content: center;
+            flex-flow: column;
+            align-items: center;
         }
 
         .title,
@@ -44,14 +45,40 @@
             font-size: 5rem;
             font-weight: 700;
             height: 100px;
-            opacity: 0.65;
+            opacity: 0.85;
+            margin: 10px;
             color: #161616;
         }
 
         .browse {
             background-color: #e3e3e3;
-            width: 20%;
-            opacity: 0.80;
+            width: 90%;
+            opacity: 0.85;
+            margin: 10px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 1fr;
+        }
+        
+        .browse p {
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        .browse p:nth-of-type(1) {
+            grid-area: 1/1/2/2;
+        }
+
+        .browse p:nth-of-type(2) {
+            grid-area: 1/2/2/3;
+        }
+
+        .browse p:nth-of-type(3) {
+            grid-area: 1/3/2/4;
+        }
+
+        .browse p:nth-of-type(4) {
+            grid-area: 1/4/2/5;
         }
 
         /* 超連結 */
@@ -68,11 +95,11 @@
         /* 主體內容 */
         .main {
             background-color: #e3e3e3;
-            width: 75%;
+            width: 97%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            opacity: 0.8;
+            opacity: 0.95;
             /* 透明度 */
         }
 
@@ -130,25 +157,20 @@
         <div class="title">
             鬼滅の刃
         </div>
+        <div class="browse">
 
+                <p>作品簡介</p>
+                <p>角色介紹</p>
+                <p>角色專欄</p>
+                <p class="outlink"><a href="https://reurl.cc/Z7OX7p" target="block">資料來源</a></p>
+
+        </div>
     </div>
+
+
 
     <div class="all">
 
-        <div class="browse">
-
-            <ul>
-                <li>作品簡介</li>
-                <li>角色介紹</li>
-                <li>
-                    角色專欄
-                    <ul>
-                        <li class="outlink"><a href="https://reurl.cc/Z7OX7p" target="block">完整文章</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-        </div>
 
         <div class="main">
             <section class="article_t">
