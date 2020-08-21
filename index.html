@@ -3,84 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>鬼滅之刃</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
-    rel="stylesheet">
-
+        rel="stylesheet">
     <style>
         /* 整頁內容 */
         body {
             font-family: 'Noto Serif TC', serif;
             font-weight: 300;
             font-size: 1.5rem;
+            color: #161616;
             background-image: url(image/HW_3.jpg);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100%;
-            color: #161616;
         }
 
-        /* 板塊內容 */
-        .head {
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-        }
-
-        .all {
-            display: flex;
-            justify-content: space-around;
-            padding: 4%;
-        }
-
-        .title {
+        .bgcolor {
             background-color: #e3e3e3;
-            height: 325px;
-            opacity: 0.85;
-            width: 90%;
+            opacity: 0.8;
+            height: 97vh;
+        }
+
+        .main {
             display: grid;
-            grid-template-rows: 3fr, 1fr;
+            grid-template-rows: 20px 0.3fr 1fr 0.3fr 20px;
+            grid-template-columns: 20px 0.5fr 1.5fr 0.4fr 0.5fr 20px;
+            place-items: center;
+            height: 680px;
         }
 
         .imgtitle {
-            grid-row: 1 2;
-            width: 40%;
-        }
-
-        .title div:first-of-type {
-            display: inline-flex;
-            justify-content: center;
+            grid-area: 3/3/4/4;
+            opacity: 0.85;
+            height: 100%;
+            width: 100%;
+            background-color: #e3e3e3;
+            display: grid;
+            place-items: center;
         }
 
         .browse {
-            grid-row: 2 3;
-            background-color: #e3e3e3;
+            grid-area: 3/4/4/5;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            place-items: center;
+            background-color: #e3e3e3;
+            /* opacity: 0.85; */
+            height: 100%;
+            width: 100%;
+            grid-template-rows: repeat(4, 1fr);
             font-weight: 600;
         }
 
-        .browse p {
-            display: inline-flex;
-            justify-content: center;
-        }
 
-        .browse p:nth-of-type(1) {
-            grid-column: 1 2;
-        }
-
-        .browse p:nth-of-type(2) {
-            grid-column: 2 3;
-        }
-
-        .browse p:nth-of-type(3) {
-            grid-column: 3 4;
-        }
-
-        .browse p:nth-of-type(4) {
-            grid-column: 4 5;
-        }
 
         /* 超連結 */
         a {
@@ -91,130 +66,32 @@
         a:hover {
             color: #eb2a2a;
         }
-
-        /* 主體內容 */
-        .main {
-            background-color: #e3e3e3;
-            width: 97%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            opacity: 0.95;
-            /* 透明度 */
-        }
-
-        .article_t {
-            padding: 10px;
-            font-weight: 400;
-            font-size: 1.5rem;
-            color: #caff75;
-            background-color: #494949;
-        }
-
-        /* 文章內容 */
-
-        .quote {
-            padding: 10px;
-            grid-area: 3/2/4/3;
-        }
-
-        .line {
-            font-style: italic;
-        }
-
-        .line:hover {
-            background-color: #494949;
-            color: #f1b739;
-        }
-
-        .img {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-
-        img {
-            width: 65%;
-        }
-
-                /* 頁尾 */
-                .footer {
-            width: 90%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #e3e3e3;
-            height: 100px;
-            opacity: 0.85;
-        }
     </style>
 </head>
 
 <body>
-    <div class="head">
 
-        <div class="title">
-            <div>
-                <img class="imgtitle"
-                    src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Kimetsu_no_Yaiba_logo.svg">
-            </div>
-            <div class="browse">
+    <div class="bgcolor">
 
-                <p><a href="index.html">作品簡介</a></p>
-                <p><a href="introduction.html">角色介紹</a></p>
-                <p><a href="topic.html">角色專欄</a></p>
-                <p><a href="https://reurl.cc/Z7OX7p" target="block">完整文章</a></p>
+    
 
-            </div>
-        </div>
+    <div class="main">
+
+    <div class="imgtitle">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Kimetsu_no_Yaiba_logo.svg">
+    </div>
+    
+    <div class="browse">
+
+        <p><a href="index.html">作品簡介</a></p>
+        <p><a href="introduction.html">角色介紹</a></p>
+        <p><a href="topic.html">角色專欄</a></p>
+        <p><a href="https://reurl.cc/Z7OX7p" target="block">完整文章</a></p>
+
     </div>
 
-    <div class="all">
-
-
-        <div class="main">
-            <section class="article_t">
-                劇情介紹</br>
-            </section>
-            <section class="quote">
-                <p>大正時代，竈門炭治郎繼承亡父留下的炭業工作，支撐一家七口，在山上過著樸實的生活。某日他做完生意返家後發現全家遭鬼王鬼舞辻無慘屠殺，
-                    而大妹禰豆子變成了鬼。
-                </p>
-                <p>鬼殺隊富岡義勇見狀後本欲斬殺禰豆子，但他在見識到兄妹倆的親情後，推薦炭治郎拜鱗瀧左近次為師，經過兩年訓練，炭治郎學會對抗鬼的呼吸法與劍術，
-                    通過考驗加入鬼殺隊...
-                </p>
-            </section>
-            <section class="article_t">
-                吾峠呼世晴</br>
-            </section>
-            <section class="quote">
-                <p>〈狩獵過頭反遭殃〉前身作與續篇〈鬼滅之刃〉於週刊《少年Jump》2016年11號開始連載。連載開始與過去4個短篇作品於《少年Jump+》再度刊載。
-                </p>
-                <p>關於自己喜歡的漫畫，他回答道「從《JOJO的奇妙冒險》到《蠟筆小新》什麼都喜歡」。作品受《JOJO的奇妙冒險》的影響很大，此外也喜歡《銀魂》，搞笑部分出自於該作品。
-                </p>
-            </section>
-            <section class="article_t">
-                外部連結</br>
-            </section>
-            <section class="quote">
-                <p>主題曲為<a href="https://www.youtube.com/watch?v=mPJWeS26DWY">《紅蓮華》</a>，動畫電影主題曲則是由LiSA負責編作詞
-                </p>
-                <p><a href="http://www.shonenjump.com/j/rensai/kimetsu.html">《鬼滅之刃》「週刊少年Jump」官方網站</a>
-                </p>
-                <p>
-                    <a href="https://kimetsu.com/anime/">《鬼滅之刃》電視動畫官方網站 </a>
-                </p>
-            </section>
-        </div>
-
-    </div>
-    <div class="head">
-
-        <div class="footer">
-            產業新尖兵課程專題</br>
-        </div>
-
-    </div>
+</div>
+</div>
 
 </body>
 
