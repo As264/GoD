@@ -8,6 +8,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
     <style>
         body {
             font-family: 'Noto Serif TC', serif;
@@ -96,6 +99,16 @@
             text-decoration: none;
             color: #eb2a2a;
         }
+
+        input {
+            font-size: 0.5rem;
+            width: 100%;
+        }
+
+        .show {
+            font-size: 0.5rem;
+            width: 100%;
+        }
     </style>
 
 </head>
@@ -107,7 +120,7 @@
             <div class="row text-center align-items-center justify-content-around">
                 <div class="col-sm-2">
                     <div class="col-sm">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Kimetsu_no_Yaiba_logo.svg">
+                        <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Kimetsu_no_Yaiba_logo.svg"></a>
                     </div>
                     <div class="col-sm">
                         <hr>
@@ -124,12 +137,19 @@
                     <div class="col-sm">
                         <p><a href="https://reurl.cc/Z7OX7p" target="block">完整文章</a></p>
                     </div>
+                    <div class="col-sm">
+                        <hr>
+                    </div>
+                    <div class="col-sm">
+                        <input type="text" value="寫點什麼給我吧">
+                        <p class="show text-left"></p>
+                    </div>
                 </div>
 
 
 
-                <div class="col-sm-8 text-left force-overflow">
-                    <p class="h1">
+                <div class="col-sm-8 text-left force-overflow text-justify">
+                    <p class="h1"><i class="fab fa-canadian-maple-leaf"></i>
                         人物介紹
                     </p>
                     <table class="table table-hover">
@@ -178,7 +198,7 @@
                                 <th class="img text-center" scope="col">甘露寺蜜璃</br><i>CV:花澤香菜</i>
                                     <hr><img src="image2/6.PNG"></th>
                                 <td>
-                                    <p>戀之呼吸的使用者，有著一頭粉紅色的頭髮，加上穿著暴露隊服的造型，初登場就令人印象深刻。因為天生體質特殊的關係，讓她一出生就有著過人的力氣，但也因此當上鬼殺隊的柱，並且曾經透露，為了要找到一個實力強大，可以保護她的好老公，才會拼命成為柱。
+                                    <p>戀之呼吸的使用者，有一頭粉紅色的頭髮，加上穿著暴露隊服的造型，初登場就令人印象深刻。因為天生體質特殊的關係，讓她一出生就有著過人的力氣，但也因此當上鬼殺隊的柱，並且曾經透露，為了要找到一個實力強大，可以保護她的好老公，才會拼命成為柱。
                                     </p>
                                 </td>
                             </tr>
@@ -194,7 +214,7 @@
                                 <th class="img text-center" scope="col">時透無一郎</br><i>CV:河西健吾</i>
                                     <hr><img src="image2/8.PNG"></th>
                                 <td>
-                                    <p>鬼殺隊中年紀最小的柱，也是霞之呼吸的使用者，僅僅花兩個月就從隊士當上柱的天才。擁有強大的實力，卻因為喪失記憶的關係，平常總是望著天空發呆，呆萌的屬性反而意外受到不少粉絲喜愛。
+                                    <p>年紀最小的柱，也是霞之呼吸的使用者，僅花兩個月就從隊士當上柱的天才。擁有強大的實力，卻因為喪失記憶，平常總是望著天空發呆，呆萌的屬性反而意外受到不少粉絲喜愛。
                                     </p>
                                 </td>
                             </tr>
@@ -202,7 +222,7 @@
                                 <th class="img text-center" scope="col">冨岡義勇</br><i>CV:櫻井孝宏</i>
                                     <hr><img src="image2/9.PNG"></th>
                                 <td>
-                                    <p>身為鬼殺隊水柱，使用與炭治郎一樣的水之呼吸，不只在相當早的時期就登場，也數度在千鈞一髮之際救下主角，冷酷的外表下卻相當講究義氣，甚至為了讓禰豆子活下來，不惜以自己的生命作為擔保。
+                                    <p>身為水柱，使用與炭治郎一樣的水之呼吸，不只在相當早的時期就登場，也數度在千鈞一髮之際救下主角，冷酷的外表下卻相當講究義氣，甚至為了讓禰豆子活下來，不惜以自己的生命作為擔保。</p>
                                 </td>
                             </tr>
                             <tr>
@@ -221,6 +241,14 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("input").change(function(){
+                $(".show").text("但是我並不會收到ㄛ。ㄏㄏ：）")
+            });
+        })
+    </script>
 </body>
 
 </html>
