@@ -6,119 +6,49 @@
     <title>我妻善逸</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style>
-        /* 整頁內容 */
         body {
             font-family: 'Noto Serif TC', serif;
             font-weight: 300;
             font-size: 1.5rem;
+            color: #161616;
             background-image: url(image/HW_3.jpg);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100%;
-            color: #161616;
+            margin: 8px;
         }
 
-        /* 板塊內容 */
-        .head {
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-        }
-
-        .all {
-            display: flex;
-            justify-content: space-around;
-            padding: 4%;
-        }
-
-        .title {
+        .browse_bg {
             background-color: #e3e3e3;
-            height: 325px;
-            opacity: 0.85;
-            width: 90%;
-            display: grid;
-            grid-template-rows: 3fr, 1fr;
+            opacity: 0.9;
+            height: 97.5vh;
+            padding: 10px;
         }
 
-        .imgtitle {
-            grid-row: 1 2;
-            width: 40%;
+        .browse_bg .container {
+            height: 100%;
         }
 
-        .title div:first-of-type {
-            display: inline-flex;
-            justify-content: center;
+        .browse_bg .row {
+            height: 100%;
         }
 
-        .browse {
-            grid-row: 2 3;
-            background-color: #e3e3e3;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            font-weight: 600;
+        .col-sm-8 {
+            border-left: 3px solid #3e3e3e;
+            overflow-y: scroll;
+            height: 60%;
         }
 
-        .browse p {
-            display: inline-flex;
-            justify-content: center;
-        }
-
-        .browse p:nth-of-type(1) {
-            grid-column: 1 2;
-        }
-
-        .browse p:nth-of-type(2) {
-            grid-column: 2 3;
-        }
-
-        .browse p:nth-of-type(3) {
-            grid-column: 3 4;
-        }
-
-        .browse p:nth-of-type(4) {
-            grid-column: 4 5;
-        }
-
-        /* 超連結 */
         a {
-            text-decoration: none;
-            color: #161616;
+            font-weight: 600;
+            vertical-align: middle;
         }
 
-        a:hover {
-            color: #eb2a2a;
-        }
-
-
-        /* 主體內容 */
-        .main {
-            background-color: #e3e3e3;
-            width: 97%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            opacity: 0.95;
-            /* 透明度 */
-        }
-
-        .article_t {
-            padding: 10px;
-            font-weight: 400;
-            font-size: 1.5rem;
-            color: #f1b739;
-            background-color: #494949;
-        }
-
-        /* 文章內容 */
-        .aut {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .quote {
-            padding: 10px;
-            grid-area: 3/2/4/3;
+        img {
+            width: 100%;
         }
 
         .line {
@@ -133,111 +63,125 @@
         .img {
             display: flex;
             justify-content: center;
-            width: 100%;
-        }
-
-        img {
             width: 65%;
         }
 
-        /* 頁尾 */
-        .footer {
-            width: 90%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #e3e3e3;
-            height: 100px;
-            opacity: 0.85;
+        /* 滾輪樣式 */
+        /* https://cssdeck.com/labs/css3-webkit-vertical-scrollbars */
+        .force-overflow::-webkit-scrollbar {
+            /* 整體 */
+            opacity: 1;
+            width: 10px;
+        }
+
+        /* .force-overflow::-webkit-scrollbar-track {
+            軌道
+        } */
+
+        .force-overflow::-webkit-scrollbar-thumb {
+            /* 滾輪 */
+            background-color: #616161;
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #161616;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #eb2a2a;
         }
     </style>
 </head>
 
 <body>
+    <div class="browse_bg">
+        <div class="container scrollbar">
 
-    <div class="head">
+            <div class="row text-center align-items-center justify-content-around">
+                <div class="col-sm-2">
+                    <div class="col-sm">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Kimetsu_no_Yaiba_logo.svg">
+                    </div>
+                    <div class="col-sm">
+                        <hr>
+                    </div>
+                    <div class="col-sm">
+                        <p><a href="story.html">作品簡介</a></p>
+                    </div>
+                    <div class="col-sm">
+                        <p><a href="intro.html">角色介紹</a></p>
+                    </div>
+                    <div class="col-sm">
+                        <p><a href="topic.html">角色專欄</a></p>
+                    </div>
+                    <div class="col-sm">
+                        <p><a href="https://reurl.cc/Z7OX7p" target="block">完整文章</a></p>
+                    </div>
+                </div>
 
-        <div class="title">
-            <div>
-            <img class="imgtitle" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Kimetsu_no_Yaiba_logo.svg">
+
+
+                <div class="col-sm-8 text-left force-overflow">
+                    <p class="h1">
+                        害怕努力－－我妻善逸與《鬼滅之刃》
+                    </p>
+                    <p class="text-right">
+                        <i class="aut">－－X.K Story</i>
+                    <p>對普羅大眾、或者更直白地說——欣賞少年漫畫的普通觀眾來說，善逸很可能不是大家眼裡會認定的
+                        英雄。他逃避、被自己的慾望驅使所行動，明明作為滅鬼隊的成員確實常在作戰的起初只想著逃跑，衝
+                        進蜘蛛山裡作戰的理由居然是想要找到禰豆子，感覺像是為了自己的慾望而行動的小男孩。直到這裡，
+                        我都無從替他辯論，我認為這都是事實並沒有錯，但是這足以定義善逸是不是一個英雄嗎？我想答案也
+                        沒有這麼肯定跟絕對。
+                    </p>
+                    <p class="line">
+                        「振作一點！不准哭、不准逃，你的行動毫無意義。」
+                    </p>
+                    <p>這是爺爺在訓練善逸的過程中對他說過的話，他不斷地敲著善逸的頭告訴他刀是如何從鋼逐漸被段鑄成一
+                        把刀、中間經過了無數次的敲打、磨練，就如同人一樣需要經歷這些努力才能夠偉大。但是善逸心底想的
+                        是：我不是鋼啊、我是人啊。沒錯，因為我們都是人、跟沒有意識的鋼不一樣；我們被敲打、被磨練的過
+                        程會想逃避、會痛苦、會害怕，有時候因此想要逃跑，我認為這是一種本能，跟只能被敲打的鋼不一樣。
+                    </p>
+                    <p class="line">
+                        「其實我也很想回應您的期待啊，可是我做不到。我覺得對爺爺很抱歉，別看我這樣，我也瞞著您偷偷的
+                        修行、完全都沒睡，可是依然沒有一點成果。」
+                    </p>
+                    <p>
+                    <div class="img mx-auto d-block"><img src="image/HW_2.png" class="rounded">
+                    </div>
+                    </p>
+                    <p>
+                        善逸的這段對白很明確地展現了，他並不是一個不願意努力的孩子：他雖然總是先想到逃跑、放棄，最後
+                        卻還是瞞著爺爺自己鍛鍊了、害怕之餘還是努力了，我認為這種精神同樣是英雄的氣質，更是比起一股腦
+                        兒向前衝的熱血更像是個人，也更能打動我。於是在我心中，善逸是個明明有多機會可以逃跑，卻還是一路
+                        走過來的英雄。你可以否定我的想法，我想這是肯定的，就如同我上面所說的，在每個人眼中，英雄的定
+                        義不該相同。
+                    </p>
+                    <p class="line">
+                        「我…我是最不喜歡自己的人。我一直都知道要好好努力，可是我會害怕、會逃避、會哭。我想要改變、我想
+                        成為有用的人……可是啊，我其實已經盡全力努力了。」
+                    </p>
+                    <p>
+                    <div class="img mx-auto d-block"><img src="image/HW_1.png" class="rounded">
+                    </div>
+                    </p>
+                    <p>
+                        於是爺爺最後對善逸說的話跟一開始不同了——他告訴善逸你可以哭、可以逃跑，但是到最後一定不要放棄、一
+                        定要相信這些地獄般訓練的日子會有回報。這一點就像不斷被敲打的鋼一樣，總會呈現在結果上的——於是那個
+                        雖然害怕努力卻仍舊努力的孩子，即便只有一招、卻還是有如同雷霆般閃耀的瞬間，我想至少在周遭的人眼中
+                        ，這就是一個極具英雄氣質的劍士、另類的英雄了。
+                    </p>
+                    <p class="line">
+                        「我做了一個夢、是個幸福的夢。夢裡我很強、比誰都要強，我有能力幫助弱小的人以及遇到困難的人、我隨
+                        時都在助人。爺爺教我的事情、他花在我身上的時間，並沒有白費 — — 那是多虧爺爺才變強的我、幫助了許
+                        多人的夢。」
+                    </p>
+                </div>
             </div>
-            <div class="browse">
-
-                <p><a href="story.html">作品簡介</a></p>
-                <p><a href="introduction.html">角色介紹</a></p>
-                <p><a href="topic.html">角色專欄</a></p>
-                <p><a href="https://reurl.cc/Z7OX7p" target="block">完整文章</a></p>
-
-            </div>
         </div>
     </div>
-
-
-
-    <div class="all">
-
-
-        <div class="main">
-            <section class="article_t">
-                害怕努力－－我妻善逸與《鬼滅之刃》</br>
-                <i class="aut">－－X.K Story</i>
-            </section>
-            <section class="quote">
-                <p>對普羅大眾、或者更直白地說——欣賞少年漫畫的普通觀眾來說，善逸很可能不是大家眼裡會認定的
-                    英雄。他逃避、被自己的慾望驅使所行動，明明作為滅鬼隊的成員確實常在作戰的起初只想著逃跑，衝
-                    進蜘蛛山裡作戰的理由居然是想要找到禰豆子，感覺像是為了自己的慾望而行動的小男孩。直到這裡，
-                    我都無從替他辯論，我認為這都是事實並沒有錯，但是這足以定義善逸是不是一個英雄嗎？我想答案也
-                    沒有這麼肯定跟絕對。
-                </p>
-                <p class="line">
-                    「振作一點！不准哭、不准逃，你的行動毫無意義。」
-                </p>
-                <p>這是爺爺在訓練善逸的過程中對他說過的話，他不斷地敲著善逸的頭告訴他刀是如何從鋼逐漸被段鑄成一
-                    把刀、中間經過了無數次的敲打、磨練，就如同人一樣需要經歷這些努力才能夠偉大。但是善逸心底想的
-                    是：我不是鋼啊、我是人啊。沒錯，因為我們都是人、跟沒有意識的鋼不一樣；我們被敲打、被磨練的過
-                    程會想逃避、會痛苦、會害怕，有時候因此想要逃跑，我認為這是一種本能，跟只能被敲打的鋼不一樣。
-                </p>
-                <p class="line">
-                    「其實我也很想回應您的期待啊，可是我做不到。我覺得對爺爺很抱歉，別看我這樣，我也瞞著您偷偷的
-                    修行、完全都沒睡，可是依然沒有一點成果。」
-                </p>
-                <section class="img"><img src="image/HW_2.png"></section>
-                <p>
-                    善逸的這段對白很明確地展現了，他並不是一個不願意努力的孩子：他雖然總是先想到逃跑、放棄，最後
-                    卻還是瞞著爺爺自己鍛鍊了、害怕之餘還是努力了，我認為這種精神同樣是英雄的氣質，更是比起一股腦
-                    兒向前衝的熱血更像是個人，也更能打動我。於是在我心中，善逸是個明明有多機會可以逃跑，卻還是一路
-                    走過來的英雄。你可以否定我的想法，我想這是肯定的，就如同我上面所說的，在每個人眼中，英雄的定
-                    義不該相同。
-                </p>
-                <p class="line">
-                    「我…我是最不喜歡自己的人。我一直都知道要好好努力，可是我會害怕、會逃避、會哭。我想要改變、我想
-                    成為有用的人……可是啊，我其實已經盡全力努力了。」
-                </p>
-                <section class="img"><img src="image/HW_1.png"></section>
-                <p>
-                    於是爺爺最後對善逸說的話跟一開始不同了——他告訴善逸你可以哭、可以逃跑，但是到最後一定不要放棄、一
-                    定要相信這些地獄般訓練的日子會有回報。這一點就像不斷被敲打的鋼一樣，總會呈現在結果上的——於是那個
-                    雖然害怕努力卻仍舊努力的孩子，即便只有一招、卻還是有如同雷霆般閃耀的瞬間，我想至少在周遭的人眼中
-                    ，這就是一個極具英雄氣質的劍士、另類的英雄了。
-                </p>
-                <p class="line">
-                    「我做了一個夢、是個幸福的夢。夢裡我很強、比誰都要強，我有能力幫助弱小的人以及遇到困難的人、我隨
-                    時都在助人。爺爺教我的事情、他花在我身上的時間，並沒有白費 — — 那是多虧爺爺才變強的我、幫助了許
-                    多人的夢。」
-                </p>
-            </section>
-        </div>
-
-    </div>
-
-    <div class="head">
-
-        <div class="footer">
-            產業新尖兵課程專題</br>
-        </div>
-
-    </div>
-
 
 </body>
 
